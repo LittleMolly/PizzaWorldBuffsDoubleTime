@@ -2,8 +2,8 @@
 
 Addon that shows tents on the world map, Onyxia/Nefarian head despawn timers and the last known Darkmoon Faire location. All this info is constantly being shared between all addon users so you will e.g. see tents on the map that other people have found and see timers for Ony/Nef head even if you didn't witness the buff drop yourself. See [below](#how-it-works) for more details on how it works.
 
-<img src="img/frame.png" width="100%">
-<img src="img/tent.png" width="100%">
+<img src="img/frame.jpg" width="100%">
+<img src="img/tent.jpg" width="100%">
 
 > [!IMPORTANT]
 >
@@ -147,3 +147,4 @@ You're always more than welcome to ask questions or provide any kind of feedback
 - **Nordanaar**: Pizzahawaii, Pizzamista, Pizzapimp<br />If you see anyone whose name starts with 'Pizza', chances are it's me. 
 
 ❤️ [Shagu](https://github.com/shagu) - Thanks for all the help!
+
