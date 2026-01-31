@@ -196,8 +196,8 @@ PWB:SetScript('OnEvent', function()
           end
 
           local receivedFrom = arg2
-          if PWB.core.shouldAcceptNewTimer(faction, boss, h, m, witness, receivedFrom, remoteVersion) then
-            PWB.core.setTimer(faction, boss, h, m, witness, receivedFrom, remoteVersion)
+          if PWB.core.shouldAcceptNewTimer(faction, boss, h, m, witness, receivedFrom) then
+            PWB.core.setTimer(faction, boss, h, m, witness, receivedFrom)
           end
         end
 
@@ -259,3 +259,4 @@ PWB:SetScript('OnUpdate', function()
     PWB.core.publishAll()
   end
 end)
+
