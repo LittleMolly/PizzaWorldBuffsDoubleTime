@@ -15,7 +15,7 @@ Addon that shows tents on the world map, Onyxia/Nefarian head despawn timers and
 
 1. Download and extract [latest version](https://github.com/Pizzahawaiii/PizzaWorldBuffs/archive/main.zip)
 2. Copy the "PizzaWorldBuffsDoubeTime-main" folder to `<WoW>/Interface/AddOns` and rename it to "PizzaWorldBuffsDoubeTime"
-3. [!IMPORTANT] Remove the original PizzaWorldBuffs Addon, they will not work well together. Maybe keep a backup somewhere
+3. > [!IMPORTANT] Remove the original PizzaWorldBuffs Addon, they will not work well together. Maybe keep a backup somewhere
 4. (Re)start WoW
 
 ## Version Upgrade
@@ -148,5 +148,6 @@ You're always more than welcome to ask questions or provide any kind of feedback
 - **Nordanaar**: Pizzahawaii, Pizzamista, Pizzapimp<br />If you see anyone whose name starts with 'Pizza', chances are it's me. 
 
 ❤️ [Shagu](https://github.com/shagu) - Thanks for all the help!
+
 
 
