@@ -23,9 +23,9 @@ Addon that shows tents on the world map, Onyxia/Nefarian head despawn timers and
 
 To update to the latest version, delete your `<WoW>/Interface/AddOns/PizzaWorldBuffs` folder and follow the [installation steps](#install) again.
 
-If updating to the latest version causes any issues, delete `<WoW>/WTF/Account/<Account>/<Server>/<Character>/SavedVariables/PizzaWorldBuffs.lua` and restart WoW. If the problems persist, please [create an issue](https://github.com/Pizzahawaiii/PizzaWorldBuffs/issues/new).
+If updating to the latest version causes any issues, delete `<WoW>/WTF/Account/<Account>/<Server>/<Character>/SavedVariables/PizzaWorldBuffs.lua` and restart WoW. If the problems persist, please [create an issue](https://github.com/LittleMolly/PizzaWorldBuffsDoubleTime/issues/new).
 
-Check the [commit history](https://github.com/Pizzahawaiii/PizzaWorldBuffs/commits/main) to see the latest changes.
+Check the [commit history](https://github.com/LittleMolly/PizzaWorldBuffsDoubleTime/commits/main) to see the latest changes.
 
 ## Commands
 
@@ -125,11 +125,11 @@ Note that DMF takes a break and shuts down every Wednesday and moves its locatio
 
 ### Q: Why doesn't PizzaWorldBuffs show me some of the data I know it shows to other players?
 
-It can take some time for all the data to be shared with other players, so you might have to wait a little bit. If you still don't see it after 3 minutes, please [create an issue](https://github.com/Pizzahawaiii/PizzaWorldBuffs/issues/new).
+It can take some time for all the data to be shared with other players, so you might have to wait a little bit. If you still don't see it after 3 minutes, please [create an issue](https://github.com/LittleMolly/PizzaWorldBuffsDoubleTime/issues/new).
 
 ### Q: I don't ever see any data at all. No tents, no buff timers and no DMF location.
 
-Try relogging or running `/join LFT`. If that doesn't help, please [create an issue](https://github.com/Pizzahawaiii/PizzaWorldBuffs/issues/new).
+Try relogging or running `/join LFT`. If that doesn't help, please [create an issue](https://github.com/LittleMolly/PizzaWorldBuffsDoubleTime/issues/new).
 
 The addon uses a hidden `LFT` chat channel to receive data from and share data with other players. It should automatically join that channel whenever the addon is loaded. But if it doesn't, maybe one of your other addons is interfering. You can check if you're in that channel by right-clicking your chat tab and selecting "Channels". You can also try disabling all other addons.
 
@@ -149,6 +149,7 @@ You're always more than welcome to ask questions or provide any kind of feedback
 - **Nordanaar**: Pizzahawaii, Pizzamista, Pizzapimp<br />If you see anyone whose name starts with 'Pizza', chances are it's me. 
 
 ❤️ [Shagu](https://github.com/shagu) - Thanks for all the help!
+
 
 
 
