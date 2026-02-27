@@ -72,7 +72,7 @@ function PWB.utils.getVersionNumber()
   minor = tonumber(minor) or 0
   patch = tonumber(patch) or 0
 
-  return major*10000 + minor*100 + patch
+  return major * 10000 + minor * 100 + patch
 end
 
 -- Identity function
@@ -120,14 +120,14 @@ end
 
 -- Check if we have any timers stored in a deprecated format (pre-v0.0.15)
 function PWB.utils.hasDeprecatedTimerFormat()
-  return PWB.utils.someTimer(function (timer)
+  return PWB.utils.someTimer(function(timer)
     return timer.deadline ~= nil
   end)
 end
 
 -- Check if I'm the direct witness for any of my timers.
 function PWB.utils.isWitness()
-  return PWB.utils.someTimer(function (timer)
+  return PWB.utils.someTimer(function(timer)
     return timer.witness == PWB.me
   end)
 end
@@ -137,7 +137,7 @@ function PWB.utils.strSplit(str, delimiter)
   if not str then return nil end
   local delimiter, fields = delimiter or ':', {}
   local pattern = string.format('([^%s]+)', delimiter)
-  string.gsub(str, pattern, function(c) fields[table.getn(fields)+1] = c end)
+  string.gsub(str, pattern, function(c) fields[table.getn(fields) + 1] = c end)
   return unpack(fields)
 end
 
@@ -170,7 +170,7 @@ function PWB.utils.getChannelId(channelName)
   local chanList = { GetChannelList() }
 
   for i = 1, length(chanList), 2 do
-    if string.lower(chanList[i+1]) == channelName then
+    if string.lower(chanList[i + 1]) == channelName then
       return chanList[i]
     end
   end
@@ -187,4 +187,11 @@ function PWB.utils.getCurrentMapZoneName()
   local mid = GetCurrentMapZone()
   local list = { GetMapZones(cid) }
   return list[mid]
+end
+
+function PWB.utils.isWitnessUsing4hTimer(witness)
+  if (witness == nil or witness == '') then
+    return false
+  end
+  return string.sub(witness, -1) == PWB.nameSuffix4h
 end

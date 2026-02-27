@@ -19,7 +19,7 @@ local BUFF_CD_HOURS = 4
 --   A-O-16-37-Pizzahawaii
 function PWB.core.encode(faction, boss, h, m, witness)
   if not faction or not boss or not h or not m or not witness then return end
-  return string.format('%s-%s-%.2d-%.2d-%s', faction, boss, h, m, witness)
+  return string.format('%s-%s-%.2d-%.2d-%s', faction, boss, h, m, witness .. PWB.nameSuffix4h)
 end
 
 -- Encode all of our timers as strings, separated by semicolon.

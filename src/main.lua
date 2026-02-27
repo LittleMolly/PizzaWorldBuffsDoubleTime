@@ -4,6 +4,8 @@ PWB.abbrev = 'PWB'
 PWB.abbrevDmf = 'PWB_DMF'
 PWB.abbrevTents = 'PWB_T'
 
+PWB.nameSuffix4h = '*'
+
 PWB.Colors = {
   primary = '|cffa050ff',
   secondary = '|cffffffff',
@@ -172,7 +174,6 @@ PWB:SetScript('OnEvent', function()
       if addonName == PWB.abbrev then
         local v = PWB.utils.getVersionNumber()
         if remoteVersion == nil then remoteVersion = "nil" end
-        -- PWB:Print("L: " .. v .. " R: " .. remoteVersion)
 
         -- Ignore timers from players with pre-1.1.4 versions that contain a bug where it sometimes
         -- shares invalid/expired timers with everyone.
@@ -185,14 +186,13 @@ PWB:SetScript('OnEvent', function()
         timerStrs[1], timerStrs[2], timerStrs[3], timerStrs[4] = PWB.utils.strSplit(msg, ';')
         for _, timerStr in next, timerStrs do
           local faction, boss, h, m, witness = PWB.core.decode(timerStr)
-          -- PWB:Print("parse msg step 1")
           if not faction or not boss or not h or not m or not witness then return end
 
-          -- convert timers from pr versions to
-
-          -- PWB:Print("parse msg step 2")
+          -- convert timers from previous versions with slower server time to the double speed time
           if tonumber(remoteVersion) < 10700 then
-            h = math.mod(h + 2, 24)
+            -- avoid adding the offset when the witness already did (using fixed version)
+            local offset = PWB.utils.isWitnessUsing4hTimer(witness) and 0 or 2
+            h = math.mod(h + offset, 24)
           end
 
           local receivedFrom = arg2
@@ -259,4 +259,3 @@ PWB:SetScript('OnUpdate', function()
     PWB.core.publishAll()
   end
 end)
-
